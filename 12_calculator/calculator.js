@@ -15,12 +15,33 @@ const sum = function(arr) {
   );
 };
 
-const multiply = function() {
+const multiply = function(arr) {
+  let initialVal = 1;
+  if (arr.length === 0) {
+    return 0;
+  }
 
+  return arr.reduce(
+    (accumulator, currentValue) => accumulator * currentValue,
+    initialVal
+  );
 };
 
-const power = function() {
-	
+const power = function(base, exponent) {
+  if (exponent === 0){
+    return 1;
+  }
+
+  if (base === 0) {
+    return 0;
+  }
+
+  let result = base;
+  for(let i = 0; i < exponent - 1; i++){
+    result *= base;
+  }
+
+  return result;
 };
 
 const factorial = function() {
