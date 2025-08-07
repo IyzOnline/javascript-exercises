@@ -1,5 +1,5 @@
 const fibonacci = function(num) {
-    if (typeof num === String) {
+    if (typeof num === "string") {
         num = parseInt(num);
     }
     
