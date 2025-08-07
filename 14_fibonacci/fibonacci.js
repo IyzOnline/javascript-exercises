@@ -5,6 +5,10 @@ const fibonacci = function(num) {
         return "OOPS";
     }
 
+    if (typeof num === String) {
+        num = parseInt(num);
+    }
+
     let prev = 0;
     let next = 1;
 
