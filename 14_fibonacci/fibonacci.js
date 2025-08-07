@@ -1,12 +1,12 @@
 const fibonacci = function(num) {
+    if (typeof num === String) {
+        num = parseInt(num);
+    }
+    
     if (num === 0) {
         return 0;
     } else if (num < 0){
         return "OOPS";
-    }
-
-    if (typeof num === String) {
-        num = parseInt(num);
     }
 
     let prev = 0;
